@@ -10,8 +10,7 @@ a,button,summary,label:has(input){touch-action:manipulation;-webkit-tap-highligh
 .nav,nav,footer{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .nav{min-height:88px;border-bottom:1px solid var(--edge)}
 .brand{display:inline-flex;align-items:center;gap:.65rem;font-size:1.5rem;font-weight:900;letter-spacing:-.07em}
-.peach{position:relative;display:inline-block;width:23px;height:21px;border-radius:46% 49% 51% 49%;background:#e48169;transform:rotate(-15deg)}
-.peach::before{content:"";position:absolute;top:-5px;left:11px;width:11px;height:5px;background:#56633a;border-radius:100% 0;transform:rotate(-18deg)}
+.brand-mascot{display:block;object-fit:contain}
 nav{font-weight:700;font-size:.9rem}nav>a{padding-block:.6rem}
 .pill,.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border:1px solid var(--ink);border-radius:100px;padding:.65rem 1.18rem;font:inherit;font-size:.94rem;font-weight:800;cursor:pointer;background:transparent;color:var(--ink);text-align:center}
 .pill:hover{background:#ffe2d4;color:var(--red)}
@@ -42,3 +41,14 @@ footer{border-top:1px solid var(--edge);padding-block:1.5rem;color:var(--muted);
 section[id]{scroll-margin-top:1rem}
 @media(max-width:760px){.wrap{width:calc(100% - 36px)}.nav{min-height:69px}nav{gap:.65rem}nav>a:first-child{display:none}.hero,.how,.order-grid{grid-template-columns:1fr}.hero{gap:1.5rem}.strip .wrap{font-size:.875rem}.hero-art{max-height:510px}}
 #message:empty{display:block;margin:0}
+.result{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:1rem;padding:1rem;background:#ffe2d4;margin-bottom:1.35rem}
+.result p{margin:.25rem 0}.result h3{font-size:1.6rem}
+.mascot{width:86px;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;background:#ffd0bf}
+.mascot img{width:100%;height:auto;object-fit:contain}
+.mascot[data-type="cozy-curious"]{background:#e2e8bb;transform:rotate(7deg)}
+.mascot[data-type="bright-familiar"]{background:#f7c6dc;transform:rotate(-7deg)}
+.mascot[data-type="bright-curious"]{background:#ffe09f;transform:rotate(11deg)}
+.plans{grid-template-columns:repeat(3,minmax(0,1fr))}
+.plans strong{display:block;font-variant-numeric:tabular-nums}
+@media(max-width:470px){.plans{grid-template-columns:1fr}.plans strong{display:inline;margin-left:.5rem}}
+#step-progress{display:block;width:100%;height:7px;margin:0 0 1.25rem;accent-color:var(--red)}

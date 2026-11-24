@@ -1,7 +1,7 @@
 # 북숭아
 
-매달 취향에 맞는 책 한 권을 골라 배송하는 서비스의 랜딩 페이지입니다.
-장르와 독서 느낌을 고른 다음 계좌 안내를 확인하고, 이체 후 배송지와 입금자명을 제출합니다.
+매달 취향에 맞는 책을 골라 배송하는 서비스의 랜딩 페이지입니다.
+세 가지 질문으로 독서 유형을 확인하고, 월 1·2·3권 중 하나를 고른 다음 계좌 안내를 확인합니다. 이체 후 배송지와 입금자명을 제출합니다.
 
 ## 로컬 미리보기
 
@@ -21,14 +21,16 @@ GitHub의 `sungbin38/Booksunga`를 Import 합니다. 루트 디렉터리는 저�
 
 | 변수 | 설정 |
 | --- | --- |
-| BOOKSUNGA_PRICE | 배송비를 포함한 첫 달 정수 원화 금액 |
+| BOOKSUNGA_PRICE_1 | 배송비를 포함한 월 1권 가격 (정수 원화) |
+| BOOKSUNGA_PRICE_2 | 배송비를 포함한 월 2권 가격 (정수 원화) |
+| BOOKSUNGA_PRICE_3 | 배송비를 포함한 월 3권 가격 (정수 원화) |
 | BOOKSUNGA_BANK | 은행명 |
 | BOOKSUNGA_ACCOUNT | 계좌번호 |
 | BOOKSUNGA_HOLDER | 예금주 |
 | BOOKSUNGA_ORDER_URL | 신청을 영구 저장하는 운영자 HTTPS 엔드포인트 |
 | BOOKSUNGA_ORDER_TOKEN | 접수 엔드포인트의 Bearer 인증 토큰 |
 
-접수 엔드포인트는 JSON으로 접수번호(id), 취향(genres, mood), 배송 정보(name, phone, address), 입금자명(depositor), 금액(amount), 상태(status), 시각(createdAt)을 받습니다. 주문 저장이 끝나면 2xx를 반환해야 접수 완료를 표시합니다. 운영자는 실제 입금을 확인하고 고객에게 안내합니다. 설정이 없으면 설문 결과와 계좌이체 준비 안내가 표시됩니다.
+접수 엔드포인트는 JSON으로 접수번호(id), 취향(genres, mood, discovery), 월 권수(quantity), 배송 정보(name, phone, address), 입금자명(depositor), 금액(amount), 상태(status), 시각(createdAt)을 받습니다. 주문 저장이 끝나면 2xx를 반환해야 접수 완료를 표시합니다. 운영자는 실제 입금을 확인하고 고객에게 안내합니다. 설정이 없으면 설문 결과와 계좌이체 준비 안내가 표시됩니다. 이때 `public/plans.json`의 19,900원·34,900원·47,900원은 예시 요금으로 표시합니다.
 
 첫 달 수동 접수까지 구현되어 있습니다. 이후 월별 갱신, 배송 일정, 교환·환불 및 개인정보 처리 조건은 판매 전에 확정해야 합니다.
 
