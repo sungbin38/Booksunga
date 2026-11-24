@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff9eb">
+<meta name="description" content="매달 당신의 취향에 맞춰 직접 고른 책 한 권을 집으로 보내드려요. 북숭아에서 나의 독서 취향을 알려주세요.">
+<meta property="og:title" content="북숭아 | 매달 한 권, 당신을 위한 책">
+<meta property="og:description" content="서점에서 고르다 지쳤다면. 취향을 알려주세요. 매달 한 권, 북숭아가 골라 보내드려요.">
+<meta property="og:type" content="website">
+<title>북숭아 | 매달 한 권, 당신을 위한 책</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="wrap nav">
+<a class="brand" href="./" translate="no"><span class="peach" aria-hidden="true"></span>북숭아</a>
+<nav aria-label="주 메뉴"><a href="#how">구독 방식</a><a class="pill" href="#quiz">취향 설문 시작</a></nav>
+</header>
+<main id="main" tabindex="-1">
+<section class="wrap hero" aria-labelledby="hero-title">
+<div class="hero-copy">
+<p class="kicker">매달 한 권, 취향 맞춤 책 배송</p>
+<h1 id="hero-title">책 고르다<br>한 달이 갔다면<span>.</span></h1>
+<p class="lead">이번 달은 북숭아에게 맡겨보세요.<br>당신의 취향에 맞춰 직접 고른 책 한 권을 집으로 보내드려요.</p>
+<a class="button" href="#quiz">내 취향에 맞는 책 받아보기</a>
+<p class="note">취향 질문 2개 · 결제 안내는 설문 뒤에</p>
+</div>
+<figure class="hero-art">
+<img src="/peach-box.jpg" alt="복숭아 옆에 놓인 분홍색 배송 상자 속 책 한 권" width="1200" height="900" fetchpriority="high">
+<figcaption>Booksunga <i>Book Club</i></figcaption>
+</figure>
+</section>
+<div class="strip"><div class="wrap"><span>직접 고른 책 한 권</span><span aria-hidden="true">✦</span><span>매달 새로운 발견</span><span aria-hidden="true">✦</span><span>우리 집 문 앞까지</span></div></div>
+<section class="wrap how" id="how">
+<div><p class="kicker">북숭아 구독 방식</p><h2>고르는 시간에<br>한 페이지 더.</h2></div>
+<ol><li><h3>어떤 책이 끌리는지 골라요</h3><p>평소 좋아하는 장르와 지금 원하는 독서 느낌만 알려주세요.</p></li><li><h3>북숭아가 한 권을 골라요</h3><p>답변을 읽고 이번 달 당신에게 어울리는 책을 직접 고릅니다.</p></li><li><h3>새 책을 집에서 받아요</h3><p>입금 확인 후 배송을 준비해요. 다음 달에도 새로운 책을 만나요.</p></li></ol>
+</section>
+<section class="order" id="quiz"><div class="wrap order-grid">
+<div><p class="kicker">북숭아 구독 신청</p><h2>이번 달,<br>어떤 책이 당기나요?</h2><p>지금 읽고 싶은 책의 느낌부터 골라보세요.</p></div>
+<div class="panel">
+<noscript>취향 설문을 이용하려면 JavaScript를 켜주세요.</noscript>
+<form id="flow">
+<p id="step-count" class="kicker">1 / 3 · 장르</p>
+<section data-step="0">
+<fieldset><legend tabindex="-1">요즘 손이 가는 장르는?</legend><p>좋아하는 장르를 하나 이상 골라주세요.</p>
+<div class="choices">
+<label><input type="checkbox" name="genres" value="소설">소설</label>
+<label><input type="checkbox" name="genres" value="에세이">에세이</label>
+<label><input type="checkbox" name="genres" value="인문·교양">인문·교양</label>
+<label><input type="checkbox" name="genres" value="경제·자기계발">경제·자기계발</label>
+<label><input type="checkbox" name="genres" value="과학·역사">과학·역사</label>
+<label><input type="checkbox" name="genres" value="새로운 장르">새로운 장르</label>
+</div></fieldset>
+</section>
+<section data-step="1" hidden>
+<fieldset disabled><legend tabindex="-1">책을 덮고 어떤 기분이면 좋겠어요?</legend><div class="choices mood">
+<label><input type="radio" name="mood" value="마음이 편안해지고 싶어요" required>마음이 편안해지고 싶어요</label>
+<label><input type="radio" name="mood" value="이야기에 푹 빠지고 싶어요">이야기에 푹 빠지고 싶어요</label>
+<label><input type="radio" name="mood" value="새로운 시각을 얻고 싶어요">새로운 시각을 얻고 싶어요</label>
+<label><input type="radio" name="mood" value="일상에 자극을 받고 싶어요">일상에 자극을 받고 싶어요</label>
+</div></fieldset>
+</section>
+<section data-step="2" hidden>
+<h3 tabindex="-1">첫 달 계좌이체 안내</h3>
+<p id="taste"></p>
+<div id="bank" class="bank" hidden><p id="price"></p><p id="account"></p><button class="pill" type="button" id="copy">계좌번호 복사</button></div>
+<p id="preview" class="bank">현재 미리보기입니다. 판매가와 계좌가 등록되면 여기에서 계좌이체로 신청할 수 있어요.</p>
+<fieldset id="delivery" disabled hidden>
+<legend>배송 정보</legend>
+<label>받는 분<input name="name" autocomplete="shipping name" required maxlength="50"></label>
+<label>연락처<input name="phone" type="tel" autocomplete="shipping tel" required maxlength="30"></label>
+<label>배송 주소와 상세주소<textarea name="address" autocomplete="shipping street-address" required maxlength="300"></textarea></label>
+<label>입금자명 (받는 분과 다를 때)<input name="depositor" autocomplete="off" maxlength="50"></label>
+<label class="consent"><input name="consent" type="checkbox" required>입금 확인과 도서 배송을 위한 연락처 및 배송 정보 제공에 동의합니다.</label>
+</fieldset>
+</section>
+<p id="message" role="status" aria-live="polite"></p>
+<div class="actions"><button id="back" class="pill" type="button" hidden>이전</button><button class="button" id="next" type="submit">독서 느낌 고르기</button></div>
+</form>
+<div id="done" hidden><h3 tabindex="-1">입금 확인 신청을 받았어요.</h3><p>입금을 확인한 뒤 입력하신 연락처로 안내드릴게요.</p><p id="receipt"></p></div>
+</div></div></section>
+<section class="wrap faq"><h2>자주 묻는 질문</h2>
+<details><summary>어떤 책이 오나요?</summary><p>설문 답변을 보고 매달 한 권을 직접 골라 배송해요.</p></details>
+<details><summary>결제는 어떻게 하나요?</summary><p>설문 뒤 계좌이체 정보를 확인할 수 있어요. 첫 달은 직접 이체하고, 입금 확인을 신청하는 방식이에요.</p></details>
+</section>
+</main>
+<footer class="wrap"><span class="brand" translate="no"><span class="peach" aria-hidden="true"></span>북숭아</span><span>당신의 취향을 담아, 매달 한 권.</span></footer>
+</body>
+</html>
